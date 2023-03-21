@@ -71,7 +71,8 @@ impl GeometryRenderer {
             mag_filter: Filter::Linear,
             min_filter: Filter::Linear,
             address_mode: [SamplerAddressMode::ClampToEdge; 3],
-            mip_lod_bias: 1.0,
+            //mip_lod_bias: 1.0,
+            mip_lod_bias: 0.0,
             ..Default::default()
         })
         .unwrap();

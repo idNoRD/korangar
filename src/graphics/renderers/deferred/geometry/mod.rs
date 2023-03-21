@@ -93,7 +93,8 @@ impl GeometryRenderer {
             min_filter: Filter::Linear,
             address_mode: [SamplerAddressMode::ClampToEdge; 3],
             anisotropy: Some(4.0),
-            mip_lod_bias: 1.0,
+            //mip_lod_bias: 1.0,
+            mip_lod_bias: 0.0,
             ..Default::default()
         })
         .unwrap();
@@ -207,7 +208,7 @@ impl GeometryRenderer {
             return;
         }
 
-        const TEXTURE_COUNT: usize = 30;
+        const TEXTURE_COUNT: usize = 16;
 
         let layout = self.pipeline.layout().clone();
         let descriptor_layout = layout.set_layouts().get(1).unwrap().clone();

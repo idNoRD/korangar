@@ -1,6 +1,6 @@
 #version 450
 
-const int TEXTURE_COUNT = 30;
+const int TEXTURE_COUNT = 16;
 
 layout(location = 0) in vec3 normal;
 layout(location = 1) in vec2 texture_coordinates;
